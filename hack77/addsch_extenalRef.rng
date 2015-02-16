@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" xmlns:sch="http://www.ascc.net/xml/schematron">
+
+	<start>
+		<element name="addition">
+			
+			<!--<sch:pattern name="Validate calculation result">
+				<sch:rule context="addition">
+					<sch:assert test="@result = number[1] + number[2]">The addition result is not correct.</sch:assert>
+				</sch:rule>
+			</sch:pattern>-->
+			
+			<externalRef href="add.sch"/>
+
+			<ref name="number" />
+			<ref name="number" />
+
+			<attribute name="result">
+				<data type="decimal" />
+			</attribute>
+
+		</element>
+	</start>
+
+	<define name="number">
+		<element name="number">
+			<data type="decimal" />
+		</element>
+	</define>
+
+</grammar>

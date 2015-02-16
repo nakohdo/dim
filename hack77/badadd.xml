@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-model href="add.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<addition result="5">
+	<number>1</number>
+	<number>2</number>
+</addition>
